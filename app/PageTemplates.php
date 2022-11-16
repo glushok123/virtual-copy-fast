@@ -20,7 +20,7 @@ trait PageTemplates
     | - page slug
     */
 
-    private function services()
+    private function post()
     {
         $this->crud->addField([   // CustomHTML
                         'name' => 'metas_separator',

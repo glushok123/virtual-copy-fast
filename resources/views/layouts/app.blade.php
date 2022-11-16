@@ -42,24 +42,23 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<!-- Left Side Of Navbar -->
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/search') }}">Кто звонил! Чей номер? <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/requisites') }}">Реквизиты Мошенников <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/scam') }}">Осторожно скам <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/articles') }}">Статьи <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item active"> <a class="nav-link" href="{{ url('/search') }}">11111 <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item active"> <a class="nav-link" href="{{ url('/requisites') }}">22222 <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item active"> <a class="nav-link" href="{{ url('/scam') }}">33333 <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item active"> <a class="nav-link" href="{{ url('/articles') }}">44444 <span class="sr-only">(current)</span></a> </li>
 					</ul>
 					<!-- Right Side Of Navbar -->
 					<ul class="navbar-nav ml-auto">
 						<!-- Authentication Links -->
 
-                        @guest
-                            <li class="nav-item"> <a class="nav-link" href="{{ url('login') }}">{{ __('Login') }}</a> </li> 
-                            <li class="nav-item"> <a class="nav-link" href="{{ url('register') }}">{{ __('Register') }}</a> </li> 
-                        @endguest
+                        @if (backpack_auth()->guest())
+                            <li class="nav-item"> <a class="nav-link" href="{{ backpack_url('login') }}">{{ __('Login') }}</a> </li> 
+                        @endif
 
-                        @auth
+                        @if (backpack_auth()->check())
                             <li class="nav-item dropdown"> 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
+                                        {{ backpack_user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
                                     <a class="dropdown-item" 
@@ -68,10 +67,10 @@
                                     >
                                         {{ __('Logout') }}
                                     </a>
-                                    <form id="logout-form" action="{{ url('logout') }}" method="POST" class="d-none"> @csrf </form>
+                                    <form id="logout-form" action="{{ backpack_url('logout') }}" method="POST" class="d-none"> @csrf </form>
                                 </div>
                             </li>
-                        @endauth
+                        @endif
 
                     </ul>
 				</div>
@@ -79,6 +78,9 @@
 		</nav>
 
 	</div>
+
+	@yield('content')
+
 </body>
 
 </html>
