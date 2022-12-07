@@ -23,64 +23,107 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+	<script src="{{ asset('js/swiper.js') }}" defer></script>
+	<link href="https://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+	<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 </head>
 
 <body>
-	<style>
-
-	</style>
-
 	<div id="app">
 		<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-			<div class="container"> <a class="navbar-brand" href="{{ url('/') }}">
-                    Главная 
-                </a>
+			<div class="container"> 
+				<a class="navbar-brand" href="#">Copy <br> Fast</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"> <span class="navbar-toggler-icon"></span> </button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent" >
 					<!-- Left Side Of Navbar -->
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/search') }}">11111 <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/requisites') }}">22222 <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/scam') }}">33333 <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item active"> <a class="nav-link" href="{{ url('/articles') }}">44444 <span class="sr-only">(current)</span></a> </li>
-					</ul>
+					<div class='container-fluid'>
+						<div class='row'>
+							<ul class="navbar-nav mr-auto justify-content-end">
+								<li class="nav-item active"> <a class="nav-link" href="{{ url('/#service') }}">Услуги <span class="sr-only">(current)</span></a> </li>
+								<li class="nav-item active"> <a class="nav-link" href="{{ url('/') }}">Цены <span class="sr-only">(current)</span></a> </li>
+								<li class="nav-item active"> <a class="nav-link" href="{{ url('/') }}">Доставка <span class="sr-only">(current)</span></a> </li>
+								<li class="nav-item active"> <a class="nav-link" href="{{ url('/') }}">Оплата <span class="sr-only">(current)</span></a> </li>
+								<li class="nav-item active"> <a class="nav-link" href="{{ url('/#kontact') }}">Контакты <span class="sr-only">(current)</span></a> </li>
+							</ul>
+						</div>
+						<div class='row'>
+							<div class="container-fluid">
+								<form class="d-flex justify-content-end">
+									<button class="btn" type="submit">Мне нужно: </button>
+									<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" style="max-width:300px">
+								</form>
+							</div>
+						</div>
+					</div>
+
 					<!-- Right Side Of Navbar -->
 					<ul class="navbar-nav ml-auto">
 						<!-- Authentication Links -->
-
-                        @if (backpack_auth()->guest())
-                            <li class="nav-item"> <a class="nav-link" href="{{ backpack_url('login') }}">{{ __('Login') }}</a> </li> 
-                        @endif
-
-                        @if (backpack_auth()->check())
-                            <li class="nav-item dropdown"> 
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ backpack_user()->name }}
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
-                                    <a class="dropdown-item" 
-                                        href="{{ url('logout') }}" 
-                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                                    >
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ backpack_url('logout') }}" method="POST" class="d-none"> @csrf </form>
-                                </div>
-                            </li>
-                        @endif
 
                     </ul>
 				</div>
 			</div>
 		</nav>
+	</div>
 
+	<div class='container-fluid'>
+		<!-- Slider main container -->
+		<div class="swiper">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide"><img class="" src="{{ asset('images/test.png') }}" alt=""></div>
+				<div class="swiper-slide"><img class="" src="{{ asset('images/test.png') }}" alt=""></div>
+				<div class="swiper-slide"><img class="" src="{{ asset('images/test.png') }}" alt=""></div>
+				...
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
+		</div>
 	</div>
 
 	@yield('content')
 
-</body>
+	<div class='container' id="kontact">
+		<div class='row'>
+			<div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A969c5de2a77c875ff5ad9f4f778b751e7aa3baf74b272b6afdc12941d0076b53&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+			</div>
+			<div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
+				<div class='text-center'>
+					<h2>Где нас найти?</h2>
+					<p>м. Новокузнецкая, Климентовский пер. 6</p>					
+					<h2>График</h2>
+					<p>Ежедневно с 9:00 до 21:00</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class='container'>
+		<div class='row text-center'>
+			<h2>Как с нами связаться?</h2>
+			<br>
+			<h5 style='color:#b3683d'>Для физических лиц</h5>
+			<p><a href="tel:+74959533736">+7(495)953-37-36</a></p>
+			<p><a href="tel:+79252777062">+7(925)277-70-62</a></p>
+			<p>e-mail: <a href="mailto:info@copy-fast.ru"> info@copy-fast.ru</a></p>
+			<br>
+			<h5 style='color:#b3683d'>Для юридических лиц</h5>
+			<p><a href="tel:+79252777062">+7(925)277-70-62</a></p>
+			<p>e-mail: <a href="mailto:info@copy-fast.ru"> info@copy-fast.ru</a></p>
+		</div>
+	</div>
+</body>
 </html>

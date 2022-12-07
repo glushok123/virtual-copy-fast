@@ -1,0 +1,50 @@
+.nav-link{
+    font-size: 24px;
+}
+.nav-item{
+    padding-right:20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.service{
+    border: none;
+}
+.card-body a{
+    color: black;
+    text-decoration: none;
+}
+.swiper {
+    height: 300px;
+}
+
+
+@media (min-width: 320px) and (max-width: 640px) {
+    .card-img-top {
+        height: 130px;
+        width: 130px;
+    }
+}
+@media (min-width: 640px) and (max-width: 1000px) {
+    .card-img-top {
+        height: 180px;
+        width: 180px;
+    }
+}
+.card-text{
+    overflow-wrap: normal;
+        /* не поддерживает IE, Firefox; является копией word-wrap */
+        word-wrap: normal;
+        word-break: normal;
+        /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+        line-break: auto;
+        /* нет поддержки для русского языка */
+        hyphens: manual;
+        /* значение auto не поддерживается Chrome */
+        min-height: 48px;
+}
+
+
+body{
+    font-family: 'Century Gothic', sans-serif;
+
+}
