@@ -36,7 +36,9 @@
 	<div id="app">
 		<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 			<div class="container"> 
-				<a class="navbar-brand" href="#">Copy <br> Fast</a>
+				<a class="navbar-brand" href="#">
+					<img src="{{ asset('images/Логотип копифаст.png') }}" alt="" width="100" height="auto" class="d-inline-block align-text-top">
+				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"> <span class="navbar-toggler-icon"></span> </button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent" >
 					<!-- Left Side Of Navbar -->
@@ -54,9 +56,14 @@
 							<div class="container-fluid">
 								<form class="d-flex justify-content-end">
 									<button class="btn" type="submit">Мне нужно: </button>
-									<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" style="max-width:300px">
+									<!--input class="form-control me-2 search" type="search" placeholder="Поиск" aria-label="Поиск" style="max-width:300px"-->
+									<div class="text-field__icon text-field__icon_search">
+										<input class="text-field__input" type="text" placeholder="" value="">
+									</div>
 								</form>
+
 							</div>
+
 						</div>
 					</div>
 
@@ -79,7 +86,6 @@
 				<div class="swiper-slide"><img class="" src="{{ asset('images/test.png') }}" alt=""></div>
 				<div class="swiper-slide"><img class="" src="{{ asset('images/test.png') }}" alt=""></div>
 				<div class="swiper-slide"><img class="" src="{{ asset('images/test.png') }}" alt=""></div>
-				...
 			</div>
 			<!-- If we need pagination -->
 			<div class="swiper-pagination"></div>
@@ -115,12 +121,12 @@
 		<div class='row text-center'>
 			<h2>Как с нами связаться?</h2>
 			<br>
-			<h5 style='color:#b3683d'>Для физических лиц</h5>
+			<h5 style='color:#b34700'>Для физических лиц:</h5>
 			<p><a href="tel:+74959533736">+7(495)953-37-36</a></p>
 			<p><a href="tel:+79252777062">+7(925)277-70-62</a></p>
 			<p>e-mail: <a href="mailto:info@copy-fast.ru"> info@copy-fast.ru</a></p>
 			<br>
-			<h5 style='color:#b3683d'>Для юридических лиц</h5>
+			<h5 style='color:#b34700'>Для юридических лиц:</h5>
 			<p><a href="tel:+79252777062">+7(925)277-70-62</a></p>
 			<p>e-mail: <a href="mailto:info@copy-fast.ru"> info@copy-fast.ru</a></p>
 		</div>
