@@ -52,25 +52,61 @@
             <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
                 <div class="tab-content text-center">
                     <div class="tab-pane fade show active" id="a">
-                        1
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ПЕЧАТЬ И КОПИРОВАНИЕ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.black_printing')
+                            @include('price.white_printing')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="b">
-                        2
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ШИРОКОФОРМАТНУЮ ПЕЧАТЬ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.shirokoformat_printing')
+                        </div>                        
                     </div>
                     <div class="tab-pane fade" id="c">
-                        3
+                        <div class="container">
+                            <h3>ЦЕНЫ НА СКАНИРОВАНИЕ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.scaning')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="d">
-                        4
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ЛАМИНИРОВАНИЕ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.laminirovanie')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="e">
-                        5
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ПЕЧАТИ И ШТАМПЫ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.petchat_and_shtamps')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="f">
-                        6
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ВИЗИТКИ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.vizitki')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="g">
-                        7
+                        <div class="container">
+                            <h3>ЦЕНЫ НА БРОШЮРОВКУ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.broshurovka')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="h">
                         8
