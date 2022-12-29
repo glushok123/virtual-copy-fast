@@ -109,13 +109,28 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="h">
-                        8
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ТВЕРДЫЙ ПЕРЕПЛЁТ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.tverdei_pereplet')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="i">
-                        9
+                        <div class="container">
+                            <h3>ЦЕНЫ НА ФОТО НА ДОКУМЕНТЫ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.foto_by_document')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="j">
-                        10
+                        <div class="container">
+                            <h3>ФОТОПЕЧАТЬ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.fotopetchat')
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="k">
                         11
@@ -124,7 +139,12 @@
                         12
                     </div>
                     <div class="tab-pane fade" id="m">
-                        13
+                        <div class="container">
+                            <h3>ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h3>
+                            <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
+                            <br>
+                            @include('price.dop_service')
+                        </div>
                     </div>
                 </div>
             </div>
