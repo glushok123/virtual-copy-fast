@@ -271,3 +271,8 @@ body {
 .table-left{
     text-align: left !important;
 }
+.card-img{
+    margin-bottom: 15px;
+    object-fit: fill !important;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999 !important;
+}

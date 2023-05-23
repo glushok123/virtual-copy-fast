@@ -13,8 +13,9 @@
                         <div class="card-body" >
 
                                 <a href="{{ url('/service#a') }}">
-                                    <p class="card-text text-center">ПЕЧАТЬ И КОПИРОВАНИЕ</p>
+                                    
                                     <img class="card-img" src="{{ asset('images/Иконки/Печать и сканирование.png') }}" alt="">
+                                    <p class="card-text text-center">ПЕЧАТЬ И КОПИРОВАНИЕ</p>
                                 </a>
 
                         </div>
@@ -24,8 +25,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#c') }}">
-                                <p class="card-text text-center">СКАНИРОВАНИЕ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Сканирование.png') }}" alt="">
+                                <p class="card-text text-center">СКАНИРОВАНИЕ</p>
                             </a>
                         </div>
                     </div>
@@ -34,8 +35,8 @@
                     <div class="card service">
                         <div class="card-body justify-content-center" >
                             <a href="{{ url('/service#b') }}">
-                                <p class="card-text text-center">ПЕЧАТЬ ШИРОКОФОРМАТА</p>
                                 <img class="card-img text-center" src="{{ asset('images/Иконки/Печать широкоформтата.png') }}" alt="">
+                                <p class="card-text text-center">ПЕЧАТЬ ШИРОКОФОРМАТА</p>
                             </a>
                         </div>
                     </div>
@@ -44,8 +45,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#g') }}">
-                                <p class="card-text text-center">БРОШЮРОВКА</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Брошюровка.png') }}" alt="">
+                                <p class="card-text text-center">БРОШЮРОВКА</p>
                             </a>
                         </div>
                     </div>
@@ -56,8 +57,11 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#f') }}">
+                                <img class="card-img" src="{{ asset('images/Иконки/Визитки.png') }}" alt="" style="    
+                                    width: 100%;
+                                    height: auto;"
+                                >
                                 <p class="card-text text-center">ВИЗИТКИ</p>
-                                <img class="card-img" src="{{ asset('images/Иконки/Визитки.png') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -66,8 +70,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#d') }}">
-                                <p class="card-text text-center">ЛАМИНИРОВАНИЕ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Ламинация.png') }}" alt="">
+                                <p class="card-text text-center">ЛАМИНИРОВАНИЕ</p>
                             </a>
                         </div>
                     </div>
@@ -76,8 +80,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#e') }}">
-                                <p class="card-text text-center">ПЕЧАТИ И ШТАМПЫ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Печати и штампы.png') }}" alt="">
+                                <p class="card-text text-center">ПЕЧАТИ И ШТАМПЫ</p>
                             </a>
                         </div>
                     </div>
@@ -86,8 +90,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#h') }}">
-                                <p class="card-text text-center">ТВЁРДЫЙ ПЕРЕПЛЁТ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Твердый переплет.png') }}" alt="">
+                                <p class="card-text text-center">ТВЁРДЫЙ ПЕРЕПЛЁТ</p>
                             </a>
                         </div>
                     </div>
@@ -98,8 +102,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#j') }}">
-                                <p class="card-text text-center">ФОТОПЕЧАТЬ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Фотопечать.png') }}" alt="">
+                                <p class="card-text text-center">ФОТОПЕЧАТЬ</p>
                             </a>
                         </div>
                     </div>
@@ -108,8 +112,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#i') }}">
-                                <p class="card-text text-center">ФОТО НА ДОКУМЕНТЫ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Фото на документы.png') }}" alt="">
+                                <p class="card-text text-center">ФОТО НА ДОКУМЕНТЫ</p>
                             </a>
                         </div>
                     </div>
@@ -118,8 +122,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#l') }}">
-                                <p class="card-text text-center">СУВЕНИРЫ</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Сувениры.png') }}" alt="">
+                                <p class="card-text text-center">СУВЕНИРЫ</p>
                             </a>
                         </div>
                     </div>
@@ -128,8 +132,8 @@
                     <div class="card service">
                         <div class="card-body" >
                             <a href="{{ url('/service#k') }}">
-                                <p class="card-text text-center">ДИЗАИН</p>
                                 <img class="card-img" src="{{ asset('images/Иконки/Дизайн.png') }}" alt="">
+                                <p class="card-text text-center">ДИЗАИН</p>
                             </a>
                         </div>
                     </div>
@@ -143,8 +147,8 @@
                     <div class="card service justify-content-center">
                         <div class="card-body justify-content-center">
                             <a href="{{ url('/service#m') }}">
-                                <p class="card-text text-center">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</p>
                                 <img class="card-img justify-content-center" src="{{ asset('images/Иконки/Дополнительные услуги.png') }}" alt="" >
+                                <p class="card-text text-center">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</p>
                             </a>
                         </div>
                     </div>
