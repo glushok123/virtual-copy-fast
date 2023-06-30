@@ -49,7 +49,7 @@
 						<li class="nav-item "> <a class="nav-link" href="{{ url('/#service') }}">Услуги <span class="sr-only">(current)</span></a> </li>
 						<li class="nav-item "> <a class="nav-link" href="{{ url('/service') }}">Цены <span class="sr-only">(current)</span></a> </li>
 						<li class="nav-item "> <a class="nav-link" href="{{ url('/delivery') }}">Доставка <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item "> <a class="nav-link" href="{{ url('/') }}">Оплата <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item "> <a class="nav-link" href="{{ url('/pay') }}">Оплата <span class="sr-only">(current)</span></a> </li>
 						<li class="nav-item "> <a class="nav-link" href="{{ url('/#kontact') }}">Контакты <span class="sr-only">(current)</span></a> </li>
 						<li class="nav-item "> </li>
 						<li class="nav-item "> </li>
