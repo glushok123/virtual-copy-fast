@@ -11,7 +11,7 @@
 
             <h2>Стоимость доставки</h2>
             
-            <table class="table table-bordered text-white">
+            <table class="table table-bordered ">
                 <tr>
                     <td>Экспресс-доставка до адреса в пределах МКАД.</td>
                     <td>900руб.</td>

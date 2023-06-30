@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+@php
+	$v = 2;
+@endphp
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,15 +27,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}?v{{$v}}" defer></script>
 	<link href="https://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?v{{$v}}" rel="stylesheet">
 	<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 	<div id="app">
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+		<nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
 			<div class="container-fluid"> 
 				<a class="navbar-brand" href="{{ url('/') }}">
 					<img src="{{ asset('images/Логотип копифаст.png') }}" alt="" width="110" height="auto" class="d-inline-block align-text-top">
@@ -54,10 +56,9 @@
 						<li class="nav-item "> </li>
 					</ul>
 
-					<form class="form-inline" >
+					<!--form class="form-inline" >
 						<input class="form-control mr-sm-2" type="search" placeholder="Мне нужно" aria-label="Search">
-						<!--button class="btn btn-outline-success my-2 my-sm-0" type="submit">Мне нужно</button-->
-					</form>
+					</form-->
 
 				</div>
 			</div>

@@ -23,12 +23,12 @@
 			<h2>Как с нами связаться?</h2>
 			<br>
 			<h5 style='color:#b34700'>Для физических лиц:</h5>
-			<p><a href="tel:+74959533736" style='color: white'>+7(495)953-37-36</a></p>
-			<p><a href="tel:+79252777062" style='color: white'>+7(925)277-70-62</a></p>
-			<p>e-mail: <a href="mailto:info@copy-fast.ru" style='color: white'> info@copy-fast.ru</a></p>
+			<p><a href="tel:+74959533736" >+7(495)953-37-36</a></p>
+			<p><a href="tel:+79252777062">+7(925)277-70-62</a></p>
+			<p>e-mail: <a href="mailto:info@copy-fast.ru" > info@copy-fast.ru</a></p>
 			<br>
 			<h5 style='color:#b34700'>Для юридических лиц:</h5>
-			<p><a href="tel:+79252777062" style='color: white'>+7(925)277-70-62</a></p>
-			<p>e-mail: <a href="mailto:info@copy-fast.ru" style='color: white'> manager@copy-fast.ru</a></p>
+			<p><a href="tel:+79252777062" >+7(925)277-70-62</a></p>
+			<p>e-mail: <a href="mailto:info@copy-fast.ru" > manager@copy-fast.ru</a></p>
 		</div>
 	</div>
