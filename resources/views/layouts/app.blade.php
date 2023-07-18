@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @php
-	$v = 2;
+	$v = 3;
 @endphp
 <head>
 	<meta charset="utf-8">
