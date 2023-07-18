@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
     <script src="{{ asset('js/app.js') }}?v{{$v}}" defer></script>
 	<link href="https://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}?v{{$v}}" rel="stylesheet">
 	<link href="{{ asset('css/font.css') }}" rel="stylesheet">
 </head>
@@ -90,13 +91,17 @@
 <!-- /Yandex.Metrika counter -->
 
 <style>
+	@font-face {
+		font-family: 'Century Gothic', sans-serif;  
+		font-weight: 700 !important;
+		font-style: bold;
+	}
 	body, html{
 		font-family: 'Century Gothic', sans-serif;  
 		font-weight: 700 !important;
 		font-style: bold;
 	}
-	.nav-link{
-		
+	.nav-link, .nav-item, .navbar-nav, .collapse, .navbar-toggler, .navbar {
 		font-weight:bold !important;
 		font-weight: 900 !important;
 	}
