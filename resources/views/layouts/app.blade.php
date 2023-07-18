@@ -90,12 +90,14 @@
 <!-- /Yandex.Metrika counter -->
 
 <style>
-	body{
+	body, html{
 		font-family: 'Century Gothic', sans-serif;  
 		font-weight: 700 !important;
 		font-style: bold;
 	}
 	.nav-link{
+		
+		font-weight:bold !important;
 		font-weight: 900 !important;
 	}
 </style>
