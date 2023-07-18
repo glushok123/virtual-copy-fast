@@ -88,6 +88,7 @@
 body{
     font-family: 'Century Gothic', sans-serif;  
     font-weight: 600 !important;
+    font-style: bold;
 }
 .navbar {
     background: white !important;
@@ -280,5 +281,6 @@ body {
     color: black !important;
 }
 .nav-item{
-    font-weight: 600 !important;
+    font-weight: 900 !important;
+    color: red !important;
 }

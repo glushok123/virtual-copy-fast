@@ -27,6 +27,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
     <script src="{{ asset('js/app.js') }}?v{{$v}}" defer></script>
 	<link href="https://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}?v{{$v}}" rel="stylesheet">
@@ -73,3 +74,14 @@
 
 </body>
 </html>
+
+<style>
+	body{
+		font-family: 'Century Gothic', sans-serif;  
+		font-weight: 700 !important;
+		font-style: bold;
+	}
+	.nav-link{
+		font-weight: 900 !important;
+	}
+</style>
