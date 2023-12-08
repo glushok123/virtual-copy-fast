@@ -14,9 +14,12 @@
                 <div class="col">
 
                 </div>
-                
+
                 <div class="col">
-                    <iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=zRwwxwIg4BM.230627&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"  align="center"></iframe>
+                    <div class="row text-center">
+                        <h2 style="color:#00199a">2204 4502 4204 6818</h2>
+                    </div>
+                    <!--iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=zRwwxwIg4BM.230627&" width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no"  align="center"></iframe-->
                 </div>
                 <div class="col">
 
