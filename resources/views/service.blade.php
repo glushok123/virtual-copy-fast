@@ -38,12 +38,12 @@
                     <li class="nav-item">
                         <a class="nav-link custom-tab-link" data-toggle="tab" href="#j">ФОТОПЕЧАТЬ</a>
                     </li>
-                    <li class="nav-item">
+                    <!--li class="nav-item">
                         <a class="nav-link custom-tab-link" data-toggle="tab" href="#k">ДИЗАЙН</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link custom-tab-link" data-toggle="tab" href="#l">СУВЕНИРЫ</a>
-                    </li>
+                    </li-->
                     <li class="nav-item">
                         <a class="nav-link custom-tab-link" data-toggle="tab" href="#m">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</a>
                     </li>
@@ -66,7 +66,7 @@
                             <h5>ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</h5>
                             <br>
                             @include('price.shirokoformat_printing')
-                        </div>                        
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="c">
                         <div class="container">

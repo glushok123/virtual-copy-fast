@@ -16,24 +16,24 @@
       <td>70</td>
       <td>60</td>
       <td>50</td>
-    </tr>    
+    </tr>
     <tr class='bold-table'>
       <td>А5</td>
-      <td>90</td>
+      <td>85</td>
       <td>80</td>
       <td>70</td>
     </tr>
     <tr class='bold-table'>
       <td>А4</td>
-      <td>100</td>
+      <td>125</td>
       <td>90</td>
       <td>80</td>
     </tr>
     <tr class='bold-table'>
       <td>А3</td>
+      <td>200</td>
+      <td>160</td>
       <td>150</td>
-      <td>140</td>
-      <td>130</td>
     </tr>
   </tbody>
 </table>
