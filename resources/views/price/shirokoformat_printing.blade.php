@@ -1,82 +1,50 @@
+@php
+    $title   = 'Черно - белое копирование / печать А4 и А3';
+    $section = 'ОДНОСТОРОНЯЯ ПЕЧАТЬ';
+
+    // Заголовки столбцов (форматы)
+    $colLabels = ['А2', 'А1', 'А0', 'Кв.м'];
+
+    // Строки с ценами
+    $rows = [
+        ['label' => '1-50',                             'values' => [100, 175, 300, 300]],
+        ['label' => '51-200',                           'values' => [90, 110, 220, 220]],
+        ['label' => '201+',                             'values' => [70, 90, 180, 180]],
+        ['label' => 'МАТОВАЯ 180 Г/М<sup>2</sup>',      'values' => [500, 1000, 2000, 2000]],
+        ['label' => 'ГЛЯНЦЕВАЯ 235 Г/М<sup>2</sup>',    'values' => [900, 1800, 3000, 3000]],
+        ['label' => 'КАЛЬКА 90 Г/М<sup>2</sup>',        'values' => [400, 700, 1300, 1400]],
+        ['label' => 'САМОКЛЕЙКА 90 Г/М<sup>2</sup>',    'values' => [1000, 2000, 3000, 3000]],
+        ['label' => 'ХОЛСТ 320 Г/М<sup>2</sup>',        'values' => [1000, 2000, 5000, 5000]],
+        ['label' => 'ЛЕКАЛО',                           'values' => ['-', '-', '-', 211]],
+    ];
+@endphp
+
 <table class="table color-white table-sm">
-  <thead class="thead-dark">
+    <thead class="thead-dark">
     <tr class='color-black'>
-      <th scope="col" colspan="8"><h3> Черно - белое копирование / печать А4 и А3</h3></th>
+        <th scope="col" colspan="{{ 1 + count($colLabels) }}"><h3>{{ $title }}</h3></th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <tr class="color-orange">
-      <th scope="row color-orange" colspan="8" >ОДНОСТОРОНЯЯ ПЕЧАТЬ</th>
+        <th scope="row color-orange" colspan="{{ 1 + count($colLabels) }}">{{ $section }}</th>
     </tr>
+
     <tr class='table-left'>
-      <th></th>
-      <td>А2</td>
-      <td>А1</td>
-      <td>А0</td>
-      <td>Кв.м</td>
+        <th></th>
+        @foreach ($colLabels as $col)
+            <td>{{ $col }}</td>
+        @endforeach
     </tr>
-    <tr class='bold-table'>
-      <td>1-10</td>
-      <td>140</td>
-      <td>210</td>
-      <td>295</td>
-      <td>295</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>11-100</td>
-      <td>115</td>
-      <td>180</td>
-      <td>265</td>
-      <td>265</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>101+</td>
-      <td>85</td>
-      <td>150</td>
-      <td>235</td>
-      <td>235</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>МАТОВАЯ 180 Г/М<sup>2</sup></td>
-      <td>500</td>
-      <td>1000</td>
-      <td>2000</td>
-      <td>2000</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>ГЛЯНЦЕВАЯ 235 Г/М<sup>2</sup></td>
-      <td>900</td>
-      <td>1800</td>
-      <td>3000</td>
-      <td>3000</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>КАЛЬКА 90 Г/М<sup>2</sup></td>
-      <td>400</td>
-      <td>700</td>
-      <td>1300</td>
-      <td>1400</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>САМОКЛЕЙКА 90 Г/М<sup>2</sup></td>
-      <td>1000</td>
-      <td>2000</td>
-      <td>3000</td>
-      <td>3000</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>ХОЛСТ 320 Г/М<sup>2</sup></td>
-      <td>1000</td>
-      <td>2000</td>
-      <td>5000</td>
-      <td>5000</td>
-    </tr>    
-    <tr class='bold-table'>
-      <td>ЛЕКАЛО</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>211</td>
-    </tr>
-  </tbody>
+
+    @foreach ($rows as $row)
+        <tr class='bold-table'>
+            {{-- label может содержать HTML (sup), поэтому {!! !!} --}}
+            <td>{!! $row['label'] !!}</td>
+            @foreach ($row['values'] as $v)
+                <td>{{ $v }}</td>
+            @endforeach
+        </tr>
+    @endforeach
+    </tbody>
 </table>

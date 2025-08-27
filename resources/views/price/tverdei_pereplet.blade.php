@@ -14,10 +14,10 @@
     </tr>
     <tr class='bold-table'>
       <td>А4</td>
-      <td>500</td>
-      <td>550</td>
-      <td>600</td>
-      <td>650</td>
+      <td>700</td>
+      <td>800</td>
+      <td>900</td>
+      <td>1000</td>
     </tr>
     <tr class='table-left'>
       <th colspan="4">ПЕРЕБРОШЮРОВКА ТВЕРДЫЙ ПЕРЕПЛЕТ</th>
@@ -25,7 +25,7 @@
     </tr>
     <tr class='table-left'>
       <th colspan="4">ВСТАВКА ФАЙЛА В ПЕРЕПЛЕТ</th>
-      <td>30</td>
+      <td>50</td>
     </tr>
     <tr class='table-left'>
       <th colspan="4">ВСТАВКА КОНВЕРТА В ПЕРЕПЛЕТ</th>

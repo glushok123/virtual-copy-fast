@@ -12,16 +12,16 @@
     </tr>
     <tr class='bold-table'>
       <th colspan="4">РУЧНАЯ РЕЗКА</th>
-      <td>10</td>
+      <td>20</td>
     </tr>
     <tr class='bold-table'>
       <th colspan="4">ЗАПИСЬ НА CD/DVD КЛИЕНТА/КОМПАНИИ</th>
       <td>100/200</td>
-    </tr>    
+    </tr>
     <tr class='bold-table'>
       <th colspan="4">ИСПОЛЬЗОВАНИЕ ИНТЕРНЕТ ОТПРАВКИ</th>
-      <td>50</td>
-    </tr>    
+      <td>30</td>
+    </tr>
     <tr class='bold-table'>
       <th colspan="3">СТОИМОСТЬ ФАЙЛА</th>
       <td>А4-5</td>

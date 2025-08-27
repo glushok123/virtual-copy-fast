@@ -1,106 +1,69 @@
+@php
+    $qtyRanges = ['2-10','11-50','51-100','101-200','201-300','301-500','500-1000'];
+
+    $prices = [
+        'title'  => 'Черно - белое копирование / печать А4 и А3',
+        'single' => [
+            'title' => 'ОДНОСТОРОННЯЯ ПЕЧАТЬ',
+            'rows'  => [
+                ['label' => 'А4',   'values' => [25,20,15,10,8,7,5]],
+                ['label' => 'A3',   'values' => [50,40,30,20,16,14,10]],
+                ['label' => 'A2',   'values' => [100,90,70,50,50,50,50]],
+                ['label' => 'A1',   'values' => [175,110,90,75,75,75,75]],
+                ['label' => 'A0',   'values' => [300,220,180,145,145,145,145]],
+                ['label' => 'Кв.м', 'values' => [300,220,180,145,145,145,145]],
+            ],
+        ],
+        'double' => [
+            'title' => 'ДВУСТОРОННЯЯ ПЕЧАТЬ',
+            'rows'  => [
+                ['label' => 'А4', 'values' => [40,30,25,17,15,12,9]],
+                ['label' => 'А3', 'values' => [70,60,50,34,30,24,18]],
+            ],
+        ],
+    ];
+@endphp
+
 <table class="table color-white table-sm">
-  <thead class="thead-dark">
+    <thead class="thead-dark">
     <tr class='color-black'>
-      <th scope="col" colspan="8"><h3> Черно - белое копирование / печать А4 и А3</h3></th>
+        <th scope="col" colspan="8"><h3>{{ $prices['title'] }}</h3></th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
+    {{-- ОДНОСТОРОННЯЯ --}}
     <tr class="color-orange">
-      <th scope="row color-orange" colspan="8" >ОДНОСТОРОНЯЯ ПЕЧАТЬ</th>
-    </tr>
-    <tr class='table-left'>
-      <th>КОЛИЧЕСТВО</th>
-      <td>2-10</td>
-      <td>11-50</td>
-      <td>51-100</td>
-      <td>101-200</td>
-      <td>201-300</td>
-      <td>301-500</td>
-      <td>500-1000</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>А4</td>
-      <td>20</td>
-      <td>16</td>
-      <td>12</td>
-      <td>10</td>
-      <td>8</td>
-      <td>7</td>
-      <td>5</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>A3</td>
-      <td>40</td>
-      <td>32</td>
-      <td>24</td>
-      <td>20</td>
-      <td>16</td>
-      <td>14</td>
-      <td>10</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>A2</td>
-      <td>100</td>
-      <td>90</td>
-      <td>80</td>
-      <td>70</td>
-      <td>60</td>
-      <td>50</td>
-      <td>40</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>A1</td>
-      <td>175</td>
-      <td>165</td>
-      <td>155</td>
-      <td>145</td>
-      <td>135</td>
-      <td>125</td>
-      <td>115</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>A0</td>
-      <td>250</td>
-      <td>240</td>
-      <td>230</td>
-      <td>220</td>
-      <td>210</td>
-      <td>200</td>
-      <td>190</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>Кв.м</td>
-      <td>250</td>
-      <td>240</td>
-      <td>230</td>
-      <td>220</td>
-      <td>230</td>
-      <td>220</td>
-      <td>210</td>
-    </tr>
-    <tr class="color-orange">
-      <th scope="row color-orange" colspan="8" >ДВУСТОРОННЯЯ ПЕЧАТЬ</th>
-    </tr>
-    <tr  class='bold-table'>
-      <td>А4</td>
-      <td>27</td>
-      <td>23</td>
-      <td>19</td>
-      <td>17</td>
-      <td>15</td>
-      <td>14</td>
-      <td>12</td>
-    </tr>
-    <tr  class='bold-table'>
-      <td>А3</td>
-      <td>54</td>
-      <td>46</td>
-      <td>38</td>
-      <td>34</td>
-      <td>30</td>
-      <td>28</td>
-      <td>24</td>
+        <th scope="row color-orange" colspan="8">{{ $prices['single']['title'] }}</th>
     </tr>
 
-  </tbody>
+    <tr class='table-left'>
+        <th>КОЛИЧЕСТВО</th>
+        @foreach($qtyRanges as $q)
+            <td>{{ $q }}</td>
+        @endforeach
+    </tr>
+
+    @foreach($prices['single']['rows'] as $row)
+        <tr class='bold-table'>
+            <td>{{ $row['label'] }}</td>
+            @foreach($row['values'] as $val)
+                <td>{{ $val }}</td>
+            @endforeach
+        </tr>
+    @endforeach
+
+    {{-- ДВУСТОРОННЯЯ --}}
+    <tr class="color-orange">
+        <th scope="row color-orange" colspan="8">{{ $prices['double']['title'] }}</th>
+    </tr>
+
+    @foreach($prices['double']['rows'] as $row)
+        <tr class='bold-table'>
+            <td>{{ $row['label'] }}</td>
+            @foreach($row['values'] as $val)
+                <td>{{ $val }}</td>
+            @endforeach
+        </tr>
+    @endforeach
+    </tbody>
 </table>

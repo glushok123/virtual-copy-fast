@@ -1,57 +1,36 @@
+@php
+    $title      = 'СКАНИРОВАНИЕ';
+    $qtyRanges  = ['1-10', '11-50', '51-100', '101-500', '500+'];
+    $rows = [
+        ['label' => 'А4', 'values' => [20, 15, 8, 6, 4]],
+        ['label' => 'А3', 'values' => [40, 30, 16, 12, 8]],
+        ['label' => 'А2', 'values' => [60, 50, 45, 40, 30]],
+        ['label' => 'А1', 'values' => [120, 95, 85, 75, 60]],
+        ['label' => 'А0', 'values' => [200, 160, 150, 140, 130]],
+    ];
+@endphp
+
 <table class="table color-white table-sm">
-  <thead class="thead-dark">
+    <thead class="thead-dark">
     <tr class='color-black'>
-      <th scope="col" colspan="8"><h3> СКАНИРОВАНИЕ</h3></th>
+        <th scope="col" colspan="{{ 1 + count($qtyRanges) }}"><h3>{{ $title }}</h3></th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <tr class='table-left'>
-      <th>КОЛИЧЕСТВО ЛИСТОВ</th>
-      <td>1-10</td>
-      <td>11-50</td>
-      <td>51-100</td>
-      <td>101-500</td>
-      <td>500+</td>
+        <th>КОЛИЧЕСТВО ЛИСТОВ</th>
+        @foreach ($qtyRanges as $q)
+            <td>{{ $q }}</td>
+        @endforeach
     </tr>
-    <tr class='bold-table'>
-      <td>А4</td>
-      <td>20</td>
-      <td>15</td>
-      <td>8</td>
-      <td>6</td>
-      <td>4</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>А3</td>
-      <td>40</td>
-      <td>30</td>
-      <td>16</td>
-      <td>12</td>
-      <td>8</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>А2</td>
-      <td>60</td>
-      <td>50</td>
-      <td>45</td>
-      <td>40</td>
-      <td>30</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>А1</td>
-      <td>120</td>
-      <td>95</td>
-      <td>85</td>
-      <td>75</td>
-      <td>60</td>
-    </tr>
-    <tr class='bold-table'>
-      <td>А0</td>
-      <td>200</td>
-      <td>160</td>
-      <td>150</td>
-      <td>140</td>
-      <td>130</td>
-    </tr>
-  </tbody>
+
+    @foreach ($rows as $row)
+        <tr class='bold-table'>
+            <td>{{ $row['label'] }}</td>
+            @foreach ($row['values'] as $val)
+                <td>{{ $val }}</td>
+            @endforeach
+        </tr>
+    @endforeach
+    </tbody>
 </table>

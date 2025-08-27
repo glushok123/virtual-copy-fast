@@ -27,9 +27,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+	<!--link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css"-->
     <script src="{{ asset('js/app.js') }}?v{{$v}}" defer></script>
-	<link href="https://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet">
+	<!--link href="https://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet"-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}?v{{$v}}" rel="stylesheet">
 	<link href="{{ asset('css/font.css') }}" rel="stylesheet">
@@ -38,12 +38,12 @@
 <body class="bg-light">
 	<div id="app">
 		<nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
-			<div class="container-fluid"> 
+			<div class="container-fluid">
 				<a class="navbar-brand" href="{{ url('/') }}">
 					<img src="{{ asset('images/Логотип копифаст.png') }}" alt="" width="110" height="auto" class="d-inline-block align-text-top">
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"> <span class="navbar-toggler-icon"></span> </button>
-				
+
 				<div class="collapse navbar-collapse" id="navbarSupportedContent" >
 					<!-- Left Side Of Navbar -->
 
@@ -92,12 +92,12 @@
 
 <style>
 	@font-face {
-		font-family: 'Century Gothic', sans-serif;  
+		font-family: 'Century Gothic', sans-serif;
 		font-weight: 700 !important;
 		font-style: bold;
 	}
 	body, html{
-		font-family: 'Century Gothic', sans-serif;  
+		font-family: 'Century Gothic', sans-serif;
 		font-weight: 700 !important;
 		font-style: bold;
 	}
