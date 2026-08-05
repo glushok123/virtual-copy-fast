@@ -1,230 +1,92 @@
-<table class="table color-white table-sm">
+@php
+    $whiteTables = [
+        [
+            'title'     => 'ЦВЕТНАЯ ПЕЧАТЬ И КОПИРОВАНИЕ А4',
+            'section'   => 'ОДНОСТОРОНЯЯ ПЕЧАТЬ',
+            'qtyRanges' => ['1-50', '51-100', '101-500', '501-1000', '1000+'],
+            'groups'    => [
+                [
+                    'title' => 'МАТОВАЯ',
+                    'rows'  => [
+                        ['label' => '80 Г/М<sup>2</sup>',  'values' => [70, 60, 50, 40, 30]],
+                        ['label' => '120 Г/М<sup>2</sup>', 'values' => [75, 65, 60, 55, 50]],
+                        ['label' => '160 Г/М<sup>2</sup>', 'values' => [80, 75, 70, 65, 60]],
+                        ['label' => '200 Г/М<sup>2</sup>', 'values' => [85, 80, 75, 70, 65]],
+                        ['label' => '250 Г/М<sup>2</sup>', 'values' => [90, 85, 80, 75, 70]],
+                        ['label' => '300 Г/М<sup>2</sup>', 'values' => [100, 95, 90, 85, 80]],
+                    ],
+                ],
+                [
+                    'title' => 'ГЛЯНЦЕВАЯ',
+                    'rows'  => [
+                        ['label' => '170 Г/М<sup>2</sup>', 'values' => [70, 65, 60, 50, 45]],
+                        ['label' => '250 Г/М<sup>2</sup>', 'values' => [90, 85, 80, 75, 70]],
+                        ['label' => 'САМОКЛЕЙКА',          'values' => [150, 145, 140, 130, 125]],
+                    ],
+                ],
+            ],
+        ],
+        [
+            'title'     => 'ЦВЕТНАЯ ПЕЧАТЬ И КОПИРОВАНИЕ А3',
+            'section'   => 'ОДНОСТОРОНЯЯ ПЕЧАТЬ',
+            'qtyRanges' => ['1-50', '51-200', '101-500', '501-1000', '1000+'],
+            'groups'    => [
+                [
+                    'title' => 'МАТОВАЯ',
+                    'rows'  => [
+                        ['label' => '80 Г/М<sup>2</sup>',  'values' => [110, 85, 75, 55, 45]],
+                        ['label' => '160 Г/М<sup>2</sup>', 'values' => [140, 115, 105, 85, 75]],
+                        ['label' => '200 Г/М<sup>2</sup>', 'values' => [150, 125, 115, 95, 85]],
+                        ['label' => '250 Г/М<sup>2</sup>', 'values' => [160, 135, 125, 105, 95]],
+                        ['label' => '280 Г/М<sup>2</sup>', 'values' => [170, 145, 135, 115, 105]],
+                    ],
+                ],
+                [
+                    'title' => 'ГЛЯНЦЕВАЯ',
+                    'rows'  => [
+                        ['label' => '170 Г/М<sup>2</sup>', 'values' => [150, 125, 115, 95, 85]],
+                        ['label' => '250 Г/М<sup>2</sup>', 'values' => [170, 145, 135, 115, 105]],
+                        ['label' => 'САМОКЛЕЙКА',          'values' => [300, 270, 240, 200, 190]],
+                    ],
+                ],
+            ],
+        ],
+    ];
+@endphp
 
-    @php
-        $priceWhiteA4 = [
-            55,
-            45,
-            40,
-            30,
-            25,
-        ];
+@foreach ($whiteTables as $table)
+    <table class="table color-white table-sm">
+        <thead class="thead-dark">
+        <tr class='color-black'>
+            <th scope="col" colspan="8"><h3> {{ $table['title'] }}</h3></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="color-orange">
+            <th scope="row color-orange" colspan="8">{{ $table['section'] }}</th>
+        </tr>
+        <tr class='table-left'>
+            <th>КОЛИЧЕСТВО</th>
+            @foreach ($table['qtyRanges'] as $q)
+                <td>{{ $q }}</td>
+            @endforeach
+        </tr>
 
-        $priceWhiteA3 = [
-            110,
-            85,
-            75,
-            55,
-            45,
-        ];
+        @foreach ($table['groups'] as $group)
+            <tr class="color-orange">
+                <th scope="row color-orange" colspan="8">{{ $group['title'] }}</th>
+            </tr>
 
-        $dop_m_120_a4 = 10;
-        $dop_m_160_a4 = 15;
-        $dop_m_200_a4 = 20;
-        $dop_m_250_a4 = 25;
-        $dop_m_300_a4 = 30;
-        $dop_gl_170_a4 = 20;
-        $dop_gl_250_a4 = 30;
-
-        $dop_m_160_a3 = 30;
-        $dop_m_200_a3 = 40;
-        $dop_m_250_a3 = 50;
-        $dop_m_280_a3 = 60;
-        $dop_gl_170_a3 = 40;
-        $dop_gl_250_a3 = 60;
-    @endphp
-    <thead class="thead-dark">
-    <tr class='color-black'>
-        <th scope="col" colspan="8"><h3> ЦВЕТНАЯ ПЕЧАТЬ И КОПИРОВАНИЕ А4</h3></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="color-orange">
-        <th scope="row color-orange" colspan="8">ОДНОСТОРОНЯЯ ПЕЧАТЬ</th>
-    </tr>
-    <tr class='table-left'>
-        <th>КОЛИЧЕСТВО</th>
-        <td>1-50</td>
-        <td>51-100</td>
-        <td>101-500</td>
-        <td>501-1000</td>
-        <td>1000+</td>
-    </tr>
-    <tr class="color-orange">
-        <th scope="row color-orange" colspan="8">МАТОВАЯ</th>
-    </tr>
-    <tr class='bold-table'>
-        <td>80 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] }}</td>
-        <td>{{ $priceWhiteA4[1] }}</td>
-        <td>{{ $priceWhiteA4[2] }}</td>
-        <td>{{ $priceWhiteA4[3] }}</td>
-        <td>{{ $priceWhiteA4[4] }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>120 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_m_120_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_m_120_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_m_120_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_m_120_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_m_120_a4 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>160 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_m_160_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_m_160_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_m_160_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_m_160_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_m_160_a4 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>200 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_m_200_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_m_200_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_m_200_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_m_200_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_m_200_a4 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>250 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_m_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_m_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_m_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_m_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_m_250_a4 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>300 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_m_300_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_m_300_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_m_300_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_m_300_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_m_300_a4 }}</td>
-    </tr>
-    <tr class="color-orange">
-        <th scope="row color-orange" colspan="8">ГЛЯНЦЕВАЯ</th>
-    </tr>
-    <tr class='bold-table'>
-        <td>170 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_gl_170_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_gl_170_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_gl_170_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_gl_170_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_gl_170_a4 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>250 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA4[0] + $dop_gl_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[1] + $dop_gl_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[2] + $dop_gl_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[3] + $dop_gl_250_a4 }}</td>
-        <td>{{ $priceWhiteA4[4] + $dop_gl_250_a4 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>САМОКЛЕЙКА</td>
-        <td>{{ $priceWhiteA4[0] + 100 }}</td>
-        <td>{{ $priceWhiteA4[1] + 100 }}</td>
-        <td>{{ $priceWhiteA4[2] + 100 }}</td>
-        <td>{{ $priceWhiteA4[3] + 100 }}</td>
-        <td>{{ $priceWhiteA4[4] + 100 }}</td>
-    </tr>
-    </tbody>
-</table>
-
-<table class="table color-white table-sm">
-    <thead class="thead-dark">
-    <tr class='color-black'>
-        <th scope="col" colspan="8"><h3> ЦВЕТНАЯ ПЕЧАТЬ И КОПИРОВАНИЕ А3</h3></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="color-orange">
-        <th scope="row color-orange" colspan="8">ОДНОСТОРОНЯЯ ПЕЧАТЬ</th>
-    </tr>
-    <tr class='table-left'>
-        <th>КОЛИЧЕСТВО</th>
-        <td>1-50</td>
-        <td>51-200</td>
-        <td>101-500</td>
-        <td>501-1000</td>
-        <td>1000+</td>
-    </tr>
-    <tr class="color-orange">
-        <th scope="row color-orange" colspan="8">МАТОВАЯ</th>
-    </tr>
-    <tr class='bold-table'>
-        <td>80 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] }}</td>
-        <td>{{ $priceWhiteA3[1] }}</td>
-        <td>{{ $priceWhiteA3[2] }}</td>
-        <td>{{ $priceWhiteA3[3] }}</td>
-        <td>{{ $priceWhiteA3[4] }}</td>
-    </tr>
-    <!--tr class='bold-table'>
-        <td>120 Г/М<sup>2</sup></td>
-        <td>140</td>
-        <td>130</td>
-        <td>100</td>
-        <td>80</td>
-        <td>70</td>
-    </tr-->
-    <tr class='bold-table'>
-        <td>160 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] + $dop_m_160_a3 }}</td>
-        <td>{{ $priceWhiteA3[1] + $dop_m_160_a3 }}</td>
-        <td>{{ $priceWhiteA3[2] + $dop_m_160_a3 }}</td>
-        <td>{{ $priceWhiteA3[3] + $dop_m_160_a3 }}</td>
-        <td>{{ $priceWhiteA3[4] + $dop_m_160_a3 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>200 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] + $dop_m_200_a3 }}</td>
-        <td>{{ $priceWhiteA3[1] + $dop_m_200_a3 }}</td>
-        <td>{{ $priceWhiteA3[2] + $dop_m_200_a3 }}</td>
-        <td>{{ $priceWhiteA3[3] + $dop_m_200_a3 }}</td>
-        <td>{{ $priceWhiteA3[4] + $dop_m_200_a3 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>250 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] + $dop_m_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[1] + $dop_m_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[2] + $dop_m_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[3] + $dop_m_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[4] + $dop_m_250_a3 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>280 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] + $dop_m_280_a3 }}</td>
-        <td>{{ $priceWhiteA3[1] + $dop_m_280_a3 }}</td>
-        <td>{{ $priceWhiteA3[2] + $dop_m_280_a3 }}</td>
-        <td>{{ $priceWhiteA3[3] + $dop_m_280_a3 }}</td>
-        <td>{{ $priceWhiteA3[4] + $dop_m_280_a3 }}</td>
-    </tr>
-    <tr class="color-orange">
-        <th scope="row color-orange" colspan="8">ГЛЯНЦЕВАЯ</th>
-    </tr>
-    <tr class='bold-table'>
-        <td>170 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] + $dop_gl_170_a3 }}</td>
-        <td>{{ $priceWhiteA3[1] + $dop_gl_170_a3 }}</td>
-        <td>{{ $priceWhiteA3[2] + $dop_gl_170_a3 }}</td>
-        <td>{{ $priceWhiteA3[3] + $dop_gl_170_a3 }}</td>
-        <td>{{ $priceWhiteA3[4] + $dop_gl_170_a3 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>250 Г/М<sup>2</sup></td>
-        <td>{{ $priceWhiteA3[0] + $dop_gl_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[1] + $dop_gl_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[2] + $dop_gl_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[3] + $dop_gl_250_a3 }}</td>
-        <td>{{ $priceWhiteA3[4] + $dop_gl_250_a3 }}</td>
-    </tr>
-    <tr class='bold-table'>
-        <td>САМОКЛЕЙКА</td>
-        <td>{{ $priceWhiteA4[0] + 200 }}</td>
-        <td>{{ $priceWhiteA4[1] + 200 }}</td>
-        <td>{{ $priceWhiteA4[2] + 200 }}</td>
-        <td>{{ $priceWhiteA4[3] + 200 }}</td>
-        <td>{{ $priceWhiteA4[4] + 200 }}</td>
-    </tr>
-    </tbody>
-</table>
+            @foreach ($group['rows'] as $row)
+                <tr class='bold-table'>
+                    {{-- label может содержать HTML (sup), поэтому {!! !!} --}}
+                    <td>{!! $row['label'] !!}</td>
+                    @foreach ($row['values'] as $val)
+                        <td>{{ $val }}</td>
+                    @endforeach
+                </tr>
+            @endforeach
+        @endforeach
+        </tbody>
+    </table>
+@endforeach

@@ -16,15 +16,15 @@
     </tr>
     <tr class='bold-table'>
       <td>А4</td>
-      <td>250</td>
       <td>300</td>
       <td>400</td>
+      <td>500</td>
     </tr>
     <tr class='bold-table'>
       <td>А3</td>
-      <td>350</td>
       <td>400</td>
       <td>500</td>
+      <td>600</td>
     </tr>
     <tr class="color-orange">
       <th scope="row color-orange" colspan="8" >НА МЕТАЛЛИЧЕСКУЮ ПРУЖИНУ</th>
@@ -37,15 +37,15 @@
     </tr>
     <tr class='bold-table'>
       <td>А4</td>
-      <td>300</td>
       <td>350</td>
-      <td>400</td>
+      <td>450</td>
+      <td>500</td>
     </tr>
     <tr class='bold-table'>
       <td>А3</td>
-      <td>400</td>
       <td>450</td>
       <td>500</td>
+      <td>550</td>
     </tr>
   </tbody>
 </table>

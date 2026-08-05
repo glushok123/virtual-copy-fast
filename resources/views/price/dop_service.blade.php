@@ -7,8 +7,8 @@
   <tbody>
     <tr class='bold-table'>
       <th colspan="3">ФАЛЬЦОВКА</th>
-      <td>А4-20</td>
-      <td>А3-30</td>
+      <td>А4-27</td>
+      <td>А3-40</td>
     </tr>
     <tr class='bold-table'>
       <th colspan="4">РУЧНАЯ РЕЗКА</th>
@@ -16,7 +16,7 @@
     </tr>
     <tr class='bold-table'>
       <th colspan="4">ЗАПИСЬ НА CD/DVD КЛИЕНТА/КОМПАНИИ</th>
-      <td>100/200</td>
+      <td>150/300</td>
     </tr>
     <tr class='bold-table'>
       <th colspan="4">ИСПОЛЬЗОВАНИЕ ИНТЕРНЕТ ОТПРАВКИ</th>

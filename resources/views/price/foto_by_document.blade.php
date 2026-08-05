@@ -7,7 +7,7 @@
   <tbody>
     <tr class='bold-table'>
       <th colspan="4">ФОТО НА ДОКУМЕНТЫ</th>
-      <td>450</td>
+      <td>600</td>
     </tr>
     <tr class='bold-table'>
       <th colspan="4">ФОТО НА EMAIL/ЗАПИСЬ НА USB</th>
@@ -15,15 +15,15 @@
     </tr>
     <tr class='bold-table'>
       <th colspan="4">ФОТО С ПОДБОРОМ КОСТЮМА/ФОРМЫ</th>
-      <td>750</td>
+      <td>800</td>
     </tr>
     <tr class='bold-table'>
       <th colspan="4">ДОПОЛНИТЕЛЬНЫЙ КОМПЛЕКТ</th>
-      <td>200</td>
+      <td>250</td>
     </tr>
     <tr class='bold-table'>
       <th colspan="4">РАСПЕЧАТКА ГОТОВЫХ ФОТО</th>
-      <td>200</td>
+      <td>250</td>
     </tr>
   </tbody>
 </table>

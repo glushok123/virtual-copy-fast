@@ -21,7 +21,7 @@
     </tr>
     <tr class='table-left'>
       <th colspan="4">ПЕРЕБРОШЮРОВКА ТВЕРДЫЙ ПЕРЕПЛЕТ</th>
-      <td>100-200</td>
+      <td>300-400</td>
     </tr>
     <tr class='table-left'>
       <th colspan="4">ВСТАВКА ФАЙЛА В ПЕРЕПЛЕТ</th>
